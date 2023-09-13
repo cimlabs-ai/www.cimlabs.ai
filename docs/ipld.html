@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPLD in the Context of a CIM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo"><a href="./index.html">CIM Labs</a></div>
+            <ul>
+                <li><a href="./overview.html">Overview</a></li>
+                <li><a href="./blueprint.html">Business Benefits</a></li>
+                <li><a href="./technology.html">Technical Features</a></li>
+                <li><a href="./index.html#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <h1>IPLD in the Context of a Composable Information Machine (CIM)</h1>
+    </section>
+
+    <section id="ipld">
+
+        <h2>Constructs</h2>        
+
+        <article>
+            <h3>Entities</h3>
+            <p>Every piece of data in IPLD has a unique CID (Content Identifier). This CID can serve as the unique identification for an Entity within the CIM. Given IPLD’s nature, data structures can be linked together, forming complex entities composed of various linked data structures. This enables a transparent and traceable reference to a specific piece of information.</p>
+        </article>
+
+        <article>
+            <h3>Components</h3>
+            <p>While each IPLD block is uniquely addressable, the data it represents (its structure or schema) can be thought of as Components in the CIM architecture. Different IPLD blocks can be reused or combined in different configurations to produce unique Entities, just as Components are combined to produce Entities in CIM.</p>
+        </article>
+
+        <article>
+            <h3>Events</h3>
+            <p>One of the powers of IPLD is its ability to create immutable data structures. When a state change occurs in the system (such as updating a data value or adding a new data block), a new CID is generated, and this change can be broadcast as an event in real-time. Systems or subscribers interested in these events can be alerted of these new CIDs, enabling them to respond immediately.</p>
+        </article>
+
+        <article>
+            <h3>Commands</h3>
+            <p>When an action requires a change in the decentralized data structure, the command can include a reference to the CID of the relevant IPLD block or series of blocks. After the command is processed, the resultant change (a new CID or set of CIDs) can be broadcast as Events.</p>
+        </article>
+
+        <article>
+            <h3>Queries</h3>
+            <p>IPLD allows for data to be fetched using its CID. So, when a system issues a query to fetch specific data, it can refer to the CID of the data block. This ensures data retrieval is precise and efficient. Moreover, if the understanding of the system changes due to the fetched data (perhaps it links to new, previously unexplored data), it can generate Events.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Infrastructure</h2>
+
+        <article>
+            <h3>IPLD's Power in Relationships</h3>
+            <p>Given IPLD's decentralized linking capability, it is inherently relationship-centric. Data isn’t siloed but linked in a meaningful manner across networks, emphasizing the interconnectedness of data structures. This harmonizes well with CIM's principle of relationships over fixed hierarchies.</p>
+        </article>
+
+        <article>
+            <h3>Data Stewardship and Security</h3>
+            <p>The immutable nature of IPLD, combined with cryptographic content addressing, ensures that data is secure and tamper-proof. When integrated into CIM, this ensures a high level of data integrity and traceability, aligning well with the emphasis on Event Stores and their importance in the CIM ecosystem.</p>
+        </article>
+
+        <article>
+            <h3>Technological Infrastructure</h3>
+            <p>IPLD can be a foundational layer for CIM’s technological backend, especially if combined with decentralized technologies. The immutable event store can be built atop IPLD's structures, ensuring resilience and universal compatibility with various software solutions.</p>
+        </article>
+    </section>
+
+    <section id="summary">
+        <h2>Summary</h2>
+        <p>IPLD serves as a robust technological framework that fits organically into the CIM architecture. Its decentralization capabilities, combined with content addressability, ensure entities are distinct, components are reusable, and events are securely broadcast in real time, leading to an agile and responsive system as envisioned in CIM.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 CIM Labs - Reproducible Resilience</p>
+    </footer>
+  </body>
+
+</html>
